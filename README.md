@@ -1,5 +1,4 @@
-# Advanced To-Do List Web Application for ISYS3001
-
+# Advanced To-Do List Web Application
 ## 1. Project Overview
 
 This is an advanced, feature-rich To-Do List web application.The application goes beyond basic task management, incorporating functionalities such as task editing, prioritization, and filtering to provide a comprehensive and user-friendly experience.
