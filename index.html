@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISYS3001 Advanced To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232980b9' d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E">
+</head>
+<body>
+    <div class="container" role="main" aria-labelledby="app-title">
+        <h1 id="app-title">To-Do List</h1>
+        
+        <div class="input-section">
+            <label for="todo-input" class="visually-hidden">Add a new to-do item</label>
+            <input 
+                type="text" 
+                id="todo-input" 
+                placeholder="Add a new to-do..." 
+                aria-label="New to-do item text input" 
+                maxlength="150" 
+            >
+            <label for="priority-select" class="visually-hidden">Select priority</label>
+            <select id="priority-select" aria-label="Task priority selection">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button id="add-button" aria-label="Add new to-do item">Add Task</button>
+        </div>
+
+        <div class="controls-section">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-btn" data-filter="pending" aria-pressed="false">Pending</button>
+                <button class="filter-btn" data-filter="completed" aria-pressed="false">Completed</button>
+            </div>
+            <div class="task-info">
+                <span aria-live="polite">
+                    <strong id="pending-tasks-count">0</strong> tasks pending
+                </span>
+                <button id="clear-completed-btn" aria-label="Clear all completed tasks">Clear Completed</button>
+            </div>
+        </div>
+        
+        <ul id="todo-list" role="list" aria-live="polite" aria-atomic="true">
+            <!-- To-Do items will be dynamically added here by JavaScript -->
+        </ul>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
